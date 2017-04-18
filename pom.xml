@@ -216,9 +216,11 @@
                         </arguments>
                     </jMeterProcessJVMSettings>
                     <propertiesFilesDirectory>${basedir}/properties</propertiesFilesDirectory>
-                    <customPropertiesFiles>
+                    <!--
+					<customPropertiesFiles>
                         <file>${basedir}/settings.properties</file>
                     </customPropertiesFiles>
+					-->
                     <propertiesJMeter>
                         <jmeter.save.saveservice.output_format>csv</jmeter.save.saveservice.output_format>
                     </propertiesJMeter>
@@ -232,16 +234,16 @@
                         <phase>pre-site</phase>
                         <configuration>
                             <tasks>
-                                <mkdir dir="${basedir}\result\${timestamp}\dashboard" />
+                                <mkdir dir="${basedir}/result/${timestamp}/dashboard" />
                                 <copy file="${basedir}/properties/reportgenerator.properties" tofile="${basedir}/target/jmeter/bin/reportgenerator.properties" />
                                 <copy todir="${basedir}/target/jmeter/bin/report-template">
                                     <fileset dir="${basedir}/properties/report-template" />
                                 </copy>
                                 <java jar="${basedir}/target/jmeter/bin/ApacheJMeter-3.1.jar" fork="true">
                                     <arg value="-g" />
-                                    <arg value="${basedir}\result\${timestamp}\*.csv" />
+                                    <arg value="${basedir}/result/${timestamp}/*.csv" />
                                     <arg value="-o" />
-                                    <arg value="${basedir}\result\${timestamp}\dashboard\" />
+                                    <arg value="${basedir}/result/${timestamp}/dashboard/" />
                                 </java>
                             </tasks>
                         </configuration>

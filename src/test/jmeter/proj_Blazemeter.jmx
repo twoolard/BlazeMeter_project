@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0.20160606">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="DemoScript" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="NON GUI Mode Settings" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="u" elementType="Argument">
+            <stringProp name="Argument.name">u</stringProp>
+            <stringProp name="Argument.value">${__P(vUsers,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="r" elementType="Argument">
+            <stringProp name="Argument.name">r</stringProp>
+            <stringProp name="Argument.value">${__P(rampUpTime,5)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="d" elementType="Argument">
+            <stringProp name="Argument.name">d</stringProp>
+            <stringProp name="Argument.value">${__P(duration,80)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="c" elementType="Argument">
+            <stringProp name="Argument.name">c</stringProp>
+            <stringProp name="Argument.value">${__P(thinkTime,1000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="baseUrl" elementType="Argument">
+            <stringProp name="Argument.name">baseUrl</stringProp>
+            <stringProp name="Argument.value">${__P(baseUrl,www.google.co.in)}</stringProp>
+            <stringProp name="Argument.desc">devapps06.performancematters.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="httpPort" elementType="Argument">
+            <stringProp name="Argument.name">httpPort</stringProp>
+            <stringProp name="Argument.value">${__P(httpPort,443)}</stringProp>
+            <stringProp name="Argument.desc">8280</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="httpProtocol" elementType="Argument">
+            <stringProp name="Argument.name">httpProtocol</stringProp>
+            <stringProp name="Argument.value">${__P(httpProtocol,https)}</stringProp>
+            <stringProp name="Argument.desc">http</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="wsEndPoint" elementType="Argument">
+            <stringProp name="Argument.name">wsEndPoint</stringProp>
+            <stringProp name="Argument.value">${__P(wsEndPoint,/ola/StudentChat)}</stringProp>
+            <stringProp name="Argument.desc">/ola/StudentChat</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="wsProtocol" elementType="Argument">
+            <stringProp name="Argument.name">wsProtocol</stringProp>
+            <stringProp name="Argument.value">${__P(wsProtocol,ws)}</stringProp>
+            <stringProp name="Argument.desc">ws</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="OLA_LoginFIle" elementType="Argument">
+            <stringProp name="Argument.name">OLA_LoginFIle</stringProp>
+            <stringProp name="Argument.value">${__P(OLA_LoginFIle,fl_sunshine_ola_logins_test_id_76230_2.csv)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="maxConnectTime" elementType="Argument">
+            <stringProp name="Argument.name">maxConnectTime</stringProp>
+            <stringProp name="Argument.value">${__P(maxConnectTime,2000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="maxResponseTime" elementType="Argument">
+            <stringProp name="Argument.name">maxResponseTime</stringProp>
+            <stringProp name="Argument.value">${__P(maxResponseTime,2000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="maxLatencyTime" elementType="Argument">
+            <stringProp name="Argument.name">maxLatencyTime</stringProp>
+            <stringProp name="Argument.value">${__P(maxLatencyTime,2000)}</stringProp>
+            <stringProp name="Argument.desc">max latency Time (in milli seconds)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="GUI Mode Settings" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="u" elementType="Argument">
+            <stringProp name="Argument.name">u</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">number of threads</stringProp>
+          </elementProp>
+          <elementProp name="r" elementType="Argument">
+            <stringProp name="Argument.name">r</stringProp>
+            <stringProp name="Argument.value">5</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">its ramp up time in seconds</stringProp>
+          </elementProp>
+          <elementProp name="d" elementType="Argument">
+            <stringProp name="Argument.name">d</stringProp>
+            <stringProp name="Argument.value">50</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">its duration in seconds</stringProp>
+          </elementProp>
+          <elementProp name="c" elementType="Argument">
+            <stringProp name="Argument.name">c</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Its for constant timer</stringProp>
+          </elementProp>
+          <elementProp name="baseUrl" elementType="Argument">
+            <stringProp name="Argument.name">baseUrl</stringProp>
+            <stringProp name="Argument.value">www.google.co.in</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="httpPort" elementType="Argument">
+            <stringProp name="Argument.name">httpPort</stringProp>
+            <stringProp name="Argument.value">443</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="httpProtocol" elementType="Argument">
+            <stringProp name="Argument.name">httpProtocol</stringProp>
+            <stringProp name="Argument.value">https</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="wsEndPoint" elementType="Argument">
+            <stringProp name="Argument.name">wsEndPoint</stringProp>
+            <stringProp name="Argument.value">/ola/StudentChat</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="wsProtocol" elementType="Argument">
+            <stringProp name="Argument.name">wsProtocol</stringProp>
+            <stringProp name="Argument.value">ws</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="OLA_LoginFIle" elementType="Argument">
+            <stringProp name="Argument.name">OLA_LoginFIle</stringProp>
+            <stringProp name="Argument.value">fl_sunshine_ola_logins_test_id_76230_2.csv</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">file to be used for login details</stringProp>
+          </elementProp>
+          <elementProp name="maxConnectTime" elementType="Argument">
+            <stringProp name="Argument.name">maxConnectTime</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">max Connect Time allowed (in milli second)</stringProp>
+          </elementProp>
+          <elementProp name="maxResponseTime" elementType="Argument">
+            <stringProp name="Argument.name">maxResponseTime</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">max Response Time (in milli seconds)</stringProp>
+          </elementProp>
+          <elementProp name="maxLatencyTIme" elementType="Argument">
+            <stringProp name="Argument.name">maxLatencyTIme</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.desc">max latency Time (in milli seconds)</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="OLA Login Details" enabled="false">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">${OLA_LoginFIle}</stringProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames"></stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Parameters" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="wsMsgId" elementType="Argument">
+            <stringProp name="Argument.name">wsMsgId</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="Cache" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">true</boolProp>
+        <intProp name="maxSize">500</intProp>
+      </CacheManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Cookie" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        <stringProp name="CookieManager.policy">standard</stringProp>
+        <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+      </CookieManager>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Header" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">*/*</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Language" elementType="Header">
+            <stringProp name="Header.name">Accept-Language</stringProp>
+            <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Encoding" elementType="Header">
+            <stringProp name="Header.name">Accept-Encoding</stringProp>
+            <stringProp name="Header.value">gzip, deflate</stringProp>
+          </elementProp>
+          <elementProp name="X-Requested-With" elementType="Header">
+            <stringProp name="Header.name">X-Requested-With</stringProp>
+            <stringProp name="Header.value">XMLHttpRequest</stringProp>
+          </elementProp>
+          <elementProp name="Connection" elementType="Header">
+            <stringProp name="Header.name">Connection</stringProp>
+            <stringProp name="Header.value">keep-alive</stringProp>
+          </elementProp>
+          <elementProp name="Content-Length" elementType="Header">
+            <stringProp name="Header.name">Content-Length</stringProp>
+            <stringProp name="Header.value">0</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+        <stringProp name="HTTPSampler.port">${httpPort}</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout">${maxConnectTime}</stringProp>
+        <stringProp name="HTTPSampler.response_timeout">${maxResponseTime}</stringProp>
+        <stringProp name="HTTPSampler.protocol">${httpProtocol}</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+        <stringProp name="ConstantTimer.delay">${c}</stringProp>
+      </ConstantTimer>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${u}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${r}</stringProp>
+        <longProp name="ThreadGroup.start_time">1492493642000</longProp>
+        <longProp name="ThreadGroup.end_time">1492493642000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="${baseUrl}" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
