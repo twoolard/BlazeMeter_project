@@ -261,8 +261,8 @@
         <stringProp name="ThreadGroup.ramp_time">${r}</stringProp>
         <longProp name="ThreadGroup.start_time">1492493642000</longProp>
         <longProp name="ThreadGroup.end_time">1492493642000</longProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration"></stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${d}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
