@@ -35,7 +35,7 @@
           </elementProp>
           <elementProp name="baseUrl" elementType="Argument">
             <stringProp name="Argument.name">baseUrl</stringProp>
-            <stringProp name="Argument.value">${__P(baseUrl,newtours.demoaut.com)}</stringProp>
+            <stringProp name="Argument.value">${__P(baseUrl,demoaut.com)}</stringProp>
             <stringProp name="Argument.desc">devapps06.performancematters.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
@@ -115,8 +115,9 @@
           </elementProp>
           <elementProp name="baseUrl" elementType="Argument">
             <stringProp name="Argument.name">baseUrl</stringProp>
-            <stringProp name="Argument.value">newtours.demoaut.com</stringProp>
+            <stringProp name="Argument.value">demoaut.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">newtours.demoaut.com</stringProp>
           </elementProp>
           <elementProp name="httpPort" elementType="Argument">
             <stringProp name="Argument.name">httpPort</stringProp>
