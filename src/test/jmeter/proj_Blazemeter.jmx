@@ -36,13 +36,11 @@
           <elementProp name="baseUrl" elementType="Argument">
             <stringProp name="Argument.name">baseUrl</stringProp>
             <stringProp name="Argument.value">${__P(baseUrl,demoaut.com)}</stringProp>
-            <stringProp name="Argument.desc">devapps06.performancematters.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="httpPort" elementType="Argument">
             <stringProp name="Argument.name">httpPort</stringProp>
             <stringProp name="Argument.value">${__P(httpPort,80)}</stringProp>
-            <stringProp name="Argument.desc">8280</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="httpProtocol" elementType="Argument">
