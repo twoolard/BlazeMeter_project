@@ -202,11 +202,12 @@
                     <resultsFileFormat>csv</resultsFileFormat>
                     <!--
 					<excludeGroupIds>commons-math3,commons-pool2</excludeGroupIds>
+					-->
 					<remoteConfig>
 							<startServersBeforeTests>true</startServersBeforeTests>
                             <stopServersAfterTests>false</stopServersAfterTests>
 					</remoteConfig>
-					-->
+					
                     <jMeterProcessJVMSettings>
                         <xms>1024</xms>
                         <xmx>1024</xmx>
@@ -234,16 +235,16 @@
                         <phase>pre-site</phase>
                         <configuration>
                             <tasks>
-                                <mkdir dir="${basedir}/result/${timestamp}/dashboard" />
+                                <mkdir dir="${basedir}\result\${timestamp}\dashboard" />
                                 <copy file="${basedir}/properties/reportgenerator.properties" tofile="${basedir}/target/jmeter/bin/reportgenerator.properties" />
                                 <copy todir="${basedir}/target/jmeter/bin/report-template">
                                     <fileset dir="${basedir}/properties/report-template" />
                                 </copy>
                                 <java jar="${basedir}/target/jmeter/bin/ApacheJMeter-3.1.jar" fork="true">
                                     <arg value="-g" />
-                                    <arg value="${basedir}/result/${timestamp}/*.csv" />
+                                    <arg value="${basedir}\result\${timestamp}\*.csv" />
                                     <arg value="-o" />
-                                    <arg value="${basedir}/result/${timestamp}/dashboard/" />
+                                    <arg value="${basedir}\result\${timestamp}\dashboard\" />
                                 </java>
                             </tasks>
                         </configuration>
