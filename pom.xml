@@ -202,12 +202,12 @@
                     <resultsFileFormat>csv</resultsFileFormat>
                     <!--
 					<excludeGroupIds>commons-math3,commons-pool2</excludeGroupIds>
-					-->
+					
 					<remoteConfig>
 							<startServersBeforeTests>true</startServersBeforeTests>
                             <stopServersAfterTests>false</stopServersAfterTests>
 					</remoteConfig>
-					
+					-->
                     <jMeterProcessJVMSettings>
                         <xms>1024</xms>
                         <xmx>1024</xmx>
