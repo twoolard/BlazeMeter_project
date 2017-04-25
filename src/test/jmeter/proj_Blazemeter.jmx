@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.1 r1770033">
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0.20160606">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="DemoScript" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -921,7 +921,7 @@
               </elementProp>
               <elementProp name="graphiteHost" elementType="Argument">
                 <stringProp name="Argument.name">graphiteHost</stringProp>
-                <stringProp name="Argument.value">192.168.1.4</stringProp>
+                <stringProp name="Argument.value">54.190.197.120</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="graphitePort" elementType="Argument">
