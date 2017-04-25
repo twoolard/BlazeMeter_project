@@ -921,7 +921,7 @@
               </elementProp>
               <elementProp name="graphiteHost" elementType="Argument">
                 <stringProp name="Argument.name">graphiteHost</stringProp>
-                <stringProp name="Argument.value">54.190.197.120</stringProp>
+                <stringProp name="Argument.value">172.31.31.33</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="graphitePort" elementType="Argument">
