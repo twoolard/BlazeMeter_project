@@ -2,6 +2,8 @@ FROM jenkins:2.46.1-alpine
 
 #COPY plugins.txt /usr/share/jenkins/plugins.txt
 #RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+COPY plugins.txt /usr/share/jenkins/ref/plugins
+RUN /usr/local/bin/install-plugins.sh
 
 
 ENV INFLUXDB_VERSION 1.2.2
@@ -15,11 +17,11 @@ RUN apk add --no-cache --virtual .build-deps wget sudo dpkg && \
 	rm -rf *.tar.gz
     
 COPY influxdb.conf /var/database/influxdb-${INFLUXDB_VERSION}-1/usr/bin
-#COPY influxdb.conf /var/database/influxdb-1.0.2/
 
-EXPOSE 8086
-EXPOSE 8083
-EXPOSE 2003
+
+#EXPOSE 8086
+#EXPOSE 8083
+#EXPOSE 2003
 #VOLUME /var/lib/influxdb
 
 #CMD influxd -config /var/jenkins_home/influxdb.conf
