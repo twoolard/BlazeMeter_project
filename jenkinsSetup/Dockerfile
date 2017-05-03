@@ -2,8 +2,8 @@ FROM jenkins:2.46.1-alpine
 
 #COPY plugins.txt /usr/share/jenkins/plugins.txt
 #RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
-COPY plugins.txt /usr/share/jenkins/ref/plugins
-RUN /usr/local/bin/install-plugins.sh
+#COPY plugins.txt /usr/share/jenkins/ref/plugins
+#RUN /usr/local/bin/install-plugins.sh
 
 
 ENV INFLUXDB_VERSION 1.2.2
