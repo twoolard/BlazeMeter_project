@@ -1,57 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.performanceMatters.OLA</groupId>
-    <artifactId>MavenPerformanceTest</artifactId>
+    <groupId>com.myPlugin.try</groupId>
+    <artifactId>jmeter</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-    <name>OLA Perf. Test</name>
+    <name>Jmeter Plugin Try</name>
     <url>http://maven.apache.org</url>
-    <modules>
-		<module>WebSocketSampler.xml</module>
-    </modules>
-    <dependencies>
-        <!--
-		<dependency>
-            <groupId>org.apache.jmeter</groupId>
-            <artifactId>ApacheJMeter_core</artifactId>
-            <version>3.1</version>
-        </dependency>
-        -->
-		<dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-util</artifactId>
-            <version>9.1.1.v20140108</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-io</artifactId>
-            <version>9.1.1.v20140108</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty.websocket</groupId>
-            <artifactId>websocket-client</artifactId>
-            <version>9.1.1.v20140108</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-http</artifactId>
-            <version>9.1.1.v20140108</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty.websocket</groupId>
-            <artifactId>websocket-api</artifactId>
-            <version>9.1.1.v20140108</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty.websocket</groupId>
-            <artifactId>websocket-common</artifactId>
-            <version>9.1.1.v20140108</version>
-        </dependency>
 
-    </dependencies>
-    <build>
+<modules>
+	<module>WebSocketSampler.xml</module>
+</modules>
+
+
+	<build>
         <plugins>
-            <!--Plugin To Generate Time Stamp Value During Execution -->
+
+			<!--Plugin To Generate Time Stamp Value During Execution -->
             <plugin>
                 <groupId>com.keyboardsamurais.maven</groupId>
                 <artifactId>maven-timestamp-plugin</artifactId>
@@ -68,194 +32,57 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--Plugin To Copy and Make dependencies Package-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.0.0</version>
-				<executions>
-                    <!--
-					<execution>
-                        <id>copy-dependencies</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/jmeter/lib</outputDirectory>
-                            <overWriteReleases>true</overWriteReleases>
-                            <overWriteSnapshots>true</overWriteSnapshots>
-                            <overWriteIfNewer>true</overWriteIfNewer>
-                        </configuration>
-					</execution>
-					-->
-					<execution>
-                        <id>copy</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-							<goal>copy-dependencies</goal>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-						<outputDirectory>${project.build.directory}/jmeter/lib</outputDirectory>
-                        <overWriteReleases>true</overWriteReleases>
-                        <overWriteSnapshots>true</overWriteSnapshots>
-                        <overWriteIfNewer>true</overWriteIfNewer>
-                            <artifactItems>
-								<artifactItem>
-                                    <groupId>com.performanceMatters.OLA</groupId>
-                                    <artifactId>JMeterWebSocketSampler</artifactId>
-                                    <version>1.0.2-SNAPSHOT</version>
-                                    <type>jar</type>
-                                    <overWrite>false</overWrite>
-                                    <outputDirectory>${project.build.directory}/jmeter/lib/ext/</outputDirectory>
-                                    
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>kg.apc</groupId>
-                                    <artifactId>jmeter-plugins-standard</artifactId>
-                                    <version>1.4.0</version>
-                                    <type>jar</type>
-                                    <overWrite>false</overWrite>
-                                    <outputDirectory>${project.build.directory}/jmeter/lib/ext/</outputDirectory>
-                                    <destFileName>JMeterPlugins-Standard.jar</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>kg.apc</groupId>
-                                    <artifactId>cmdrunner</artifactId>
-                                    <version>2.0</version>
-                                    <type>jar</type>
-                                    <overWrite>false</overWrite>
-                                    <outputDirectory>${project.build.directory}/jmeter/lib/ext/</outputDirectory>
-                                    <destFileName>cmdrunner.jar</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>kg.apc</groupId>
-                                    <artifactId>jmeter-plugins-extras</artifactId>
-                                    <version>1.4.0</version>
-                                    <type>jar</type>
-                                    <overWrite>false</overWrite>
-                                    <outputDirectory>${project.build.directory}/jmeter/lib/ext/</outputDirectory>
-                                    <destFileName>JMeterPlugins-Extras.jar</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>kg.apc</groupId>
-                                    <artifactId>jmeter-plugins-extras-libs</artifactId>
-                                    <version>1.4.0</version>
-                                    <type>jar</type>
-                                    <overWrite>false</overWrite>
-                                    <outputDirectory>${project.build.directory}/jmeter/lib/ext/</outputDirectory>
-                                    <destFileName>JMeterPlugins-ExtrasLibs.jar</destFileName>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.lazerycode.jmeter</groupId>
-                <artifactId>jmeter-maven-plugin</artifactId>
-                <version>2.1.0</version>
-                <executions>
-                    <execution>
-                        <configuration>
-                            <jmeterPlugins></jmeterPlugins>
-                            
-						<propertiesUser>
-							<!--
-							<user>20</user>
-							<rup>25</rup>
-							<duration>60</duration>
-							<ttime>5000</ttime>
-							-->
-							
-						</propertiesUser>
-				
-                            <!--
-						<proxyConfig>
+		
+			<plugin>
+                    <groupId>com.lazerycode.jmeter</groupId>
+                    <artifactId>jmeter-maven-plugin</artifactId>
+                    <version>2.2.0</version>
+                    <executions>
+                        <execution>
+                            <id>jmeter-tests</id>
+                            <goals>
+                                <goal>jmeter</goal>
+							</goals>
+                        </execution>
+					</executions>
+					<configuration>
+						<propertiesFilesDirectory>${basedir}/properties</propertiesFilesDirectory>
 						
-							<host>proxy.corp.globant.com</host>
-							<port>3128</port>
-							<username>jimbob</username>
-							<password>correct horse battery staple</password>
-							<hostExclusions>localhost|*.lazerycode.com</hostExclusions>
+						<jmeterExtensions>
+							<artifact>kg.apc:jmeter-plugins-standard:jar:1.4.0</artifact>
+							<artifact>kg.apc:jmeter-plugins-extras:jar:1.4.0</artifact>
+							<artifact>kg.apc:jmeter-plugins-extras-libs:jar:1.4.0</artifact>
+							<artifact>com.performanceMatters.OLA:JMeterWebSocketSampler:jar:1.0.2-SNAPSHOT</artifact>
+						</jmeterExtensions>
+						<downloadExtensionDependencies>false</downloadExtensionDependencies>
 						
-						</proxyConfig>
-				-->
-                        </configuration>
-                        <id>jmeter-tests</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>jmeter</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <jmeterVersion>3.1</jmeterVersion>
-                    <overrideRootLogLevel>info</overrideRootLogLevel>
-                    <!--
-					<jmeterExtensions>
-						<artifact>kg.apc:jmeter-plugins-dummy:jar:0.2</artifact>
-					</jmeterExtensions>
-					-->
-                    <suppressJMeterOutput>false</suppressJMeterOutput>
-                    <resultsDirectory>result/${timestamp}</resultsDirectory>
-                    <logsDirectory>result/${timestamp}</logsDirectory>
-                    <resultsFileFormat>csv</resultsFileFormat>
-                    <!--
-					<excludeGroupIds>commons-math3,commons-pool2</excludeGroupIds>
-					
-					<remoteConfig>
-							<startServersBeforeTests>true</startServersBeforeTests>
-                            <stopServersAfterTests>false</stopServersAfterTests>
-					</remoteConfig>
-					-->
-                    <jMeterProcessJVMSettings>
+						<suppressJMeterOutput>false</suppressJMeterOutput>
+						<overrideRootLogLevel>ERROR</overrideRootLogLevel>
+						
+						<appendResultsTimestamp>false</appendResultsTimestamp>
+						<testResultsTimestamp>false</testResultsTimestamp>
+						
+						<resultsDirectory>${basedir}/result/${timestamp}</resultsDirectory>
+						<resultsFileFormat>csv</resultsFileFormat>
+						<logsDirectory>${basedir}/result/${timestamp}</logsDirectory>
+						
+						<reportDirectory>${basedir}/result/${timestamp}</reportDirectory>
+						<templateDirectory>${basedir}/properties/report-template/</templateDirectory>
+						<targetDirectory>${basedir}/result</targetDirectory>
+						<REPORT_DIR_DATE_FORMAT>yyyy-MM-dd-HH-mm-ss</REPORT_DIR_DATE_FORMAT>
+						<generateReports>true</generateReports>
+						
+						<jMeterProcessJVMSettings>
                         <xms>1024</xms>
                         <xmx>1024</xmx>
                         <arguments>
                             <argument>-Xprof</argument>
                             <argument>-Xfuture</argument>
                         </arguments>
-                    </jMeterProcessJVMSettings>
-                    <propertiesFilesDirectory>${basedir}/properties</propertiesFilesDirectory>
-                    <!--
-					<customPropertiesFiles>
-                        <file>${basedir}/settings.properties</file>
-                    </customPropertiesFiles>
-					-->
-                    <propertiesJMeter>
-                        <jmeter.save.saveservice.output_format>csv</jmeter.save.saveservice.output_format>
-                    </propertiesJMeter>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>jmeter-dashboard</id>
-                        <phase>pre-site</phase>
-                        <configuration>
-                            <tasks>
-                                <mkdir dir="${basedir}\result\${timestamp}\dashboard" />
-                                <copy file="${basedir}/properties/reportgenerator.properties" tofile="${basedir}/target/jmeter/bin/reportgenerator.properties" />
-                                <copy todir="${basedir}/target/jmeter/bin/report-template">
-                                    <fileset dir="${basedir}/properties/report-template" />
-                                </copy>
-                                <java jar="${basedir}/target/jmeter/bin/ApacheJMeter-3.1.jar" fork="true">
-                                    <arg value="-g" />
-                                    <arg value="${basedir}\result\${timestamp}\*.csv" />
-                                    <arg value="-o" />
-                                    <arg value="${basedir}\result\${timestamp}\dashboard\" />
-                                </java>
-                            </tasks>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
+						</jMeterProcessJVMSettings>
+						
+					</configuration>
+				</plugin>
+		 </plugins>
     </build>
 </project>
