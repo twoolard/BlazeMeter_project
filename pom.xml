@@ -39,6 +39,9 @@
                     <version>2.2.0</version>
                     <executions>
                         <execution>
+						<!--configuration>
+							
+						</configuration-->
                             <id>jmeter-tests</id>
                             <goals>
                                 <goal>jmeter</goal>
@@ -46,6 +49,12 @@
                         </execution>
 					</executions>
 					<configuration>
+						<propertiesUser>
+								<vUsers>${vUsers}</vUsers>
+								<rampUpTime>${rampUpTime}</rampUpTime>
+								<duration>${duration}</duration>
+								<thinkTime>${thinkTime}</thinkTime>
+						</propertiesUser>
 						<propertiesFilesDirectory>${basedir}/properties</propertiesFilesDirectory>
 						
 						<jmeterExtensions>
