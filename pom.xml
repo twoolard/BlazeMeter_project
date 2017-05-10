@@ -7,9 +7,9 @@
     <name>Jmeter Plugin Try</name>
     <url>http://maven.apache.org</url>
 
-<modules>
+<!--modules>
 	<module>WebSocketSampler.xml</module>
-</modules>
+</modules-->
 
 
 	<build>
@@ -52,7 +52,7 @@
 							<artifact>kg.apc:jmeter-plugins-standard:jar:1.4.0</artifact>
 							<artifact>kg.apc:jmeter-plugins-extras:jar:1.4.0</artifact>
 							<artifact>kg.apc:jmeter-plugins-extras-libs:jar:1.4.0</artifact>
-							<artifact>com.performanceMatters.OLA:JMeterWebSocketSampler:jar:1.0.2-SNAPSHOT</artifact>
+							<!--artifact>com.performanceMatters.OLA:JMeterWebSocketSampler:jar:1.0.2-SNAPSHOT</artifact-->
 						</jmeterExtensions>
 						<downloadExtensionDependencies>false</downloadExtensionDependencies>
 						
