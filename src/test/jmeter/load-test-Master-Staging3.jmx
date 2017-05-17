@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Collector test Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="hostUrl" elementType="Argument">
+            <stringProp name="Argument.name">hostUrl</stringProp>
+            <stringProp name="Argument.value">${__P(HostUrl, master-staging3.intellify.io)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HttpRequestDefaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="HttpRequestDefaults" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">${hostUrl}</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path">/</stringProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Content-Type" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Encoding" elementType="Header">
+            <stringProp name="Header.name">Accept-Encoding</stringProp>
+            <stringProp name="Header.value">gzip, deflate</stringProp>
+          </elementProp>
+          <elementProp name="X-Requested-With" elementType="Header">
+            <stringProp name="Header.name">X-Requested-With</stringProp>
+            <stringProp name="Header.value">XMLHttpRequest</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Collector Test" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Test Scenario - Collector Test" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(threads, 250)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(rampup, 20)}</stringProp>
+        <longProp name="ThreadGroup.start_time">1469800513000</longProp>
+        <longProp name="ThreadGroup.end_time">1469792214000</longProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${__P(duration,600)}</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;apiKey&quot;: &quot;apWPGaiaQSOICOoTporixg&quot;,&#xd;
+    &quot;sensorId&quot;: &quot;com.aws.load.prank.ds&quot;,&#xd;
+    &quot;event&quot;: {&#xd;
+      &quot;iType&quot;: &quot;AnnotationEvent&quot;,&#xd;
+      &quot;@context&quot;: &quot;http://purl.imsglobal.org/ctx/caliper/v1/Context&quot;,&#xd;
+      &quot;@type&quot;: &quot;http://purl.imsglobal.org/caliper/v1/AnnotationEvent&quot;,&#xd;
+      &quot;actor&quot;: {&#xd;
+        &quot;iType&quot;: &quot;Person&quot;,&#xd;
+        &quot;@id&quot;: &quot;${actorId}_${__threadNum}&quot;,&#xd;
+        &quot;@type&quot;: &quot;http://purl.imsglobal.org/caliper/v1/lis/Person&quot;,&#xd;
+        &quot;name&quot;: &quot;Ins${__threadNum}&quot;,&#xd;
+        &quot;dateModified&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+        &quot;firstName&quot;: null,&#xd;
+        &quot;lastName&quot;: null,&#xd;
+        &quot;email&quot;: null,&#xd;
+        &quot;roles&quot;: [],&#xd;
+        &quot;description&quot;: &quot;Actor is Instructor&quot;,&#xd;
+        &quot;properties&quot;: null,&#xd;
+        &quot;extensions&quot;: null,&#xd;
+        &quot;dateCreated&quot;: &quot;${__time(/1000)}&quot;&#xd;
+      },&#xd;
+      &quot;action&quot;: &quot;http://purl.imsglobal.org/vocab/caliper/v1/action#Tagged&quot;,&#xd;
+      &quot;object&quot;: {&#xd;
+        &quot;@id&quot;: &quot;https://example.com/viewer/book/79405870#epubcfi(/4/3/1)&quot;,&#xd;
+        &quot;@type&quot;: &quot;http://purl.imsglobal.org/caliper/v1/Frame&quot;,&#xd;
+        &quot;name&quot;: &quot;iframe&quot;,&#xd;
+        &quot;objectType&quot;: null,&#xd;
+        &quot;alignedLearningObjective&quot;: null,&#xd;
+        &quot;dateCreated&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+        &quot;dateModified&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+        &quot;index&quot;: 14,&#xd;
+        &quot;description&quot;: null,&#xd;
+        &quot;properties&quot;: null,&#xd;
+        &quot;extensions&quot;: null,&#xd;
+        &quot;keywords&quot;: null,&#xd;
+        &quot;isPartOf&quot;: null,&#xd;
+        &quot;author&quot;: &quot;David G.&quot;,&#xd;
+        &quot;datePublished&quot;: 0&#xd;
+      },&#xd;
+      &quot;target&quot;: null,&#xd;
+      &quot;generated&quot;: null,&#xd;
+      &quot;startedAtTime&quot;: 0,&#xd;
+      &quot;endedAtTime&quot;: 0,&#xd;
+      &quot;duration&quot;: null,&#xd;
+      &quot;edApp&quot;: {&#xd;
+        &quot;iType&quot;: &quot;SoftwareApplication&quot;,&#xd;
+        &quot;@id&quot;: &quot;https://example.com/super-assessment-tool&quot;,&#xd;
+        &quot;@type&quot;: &quot;http://purl.imsglobal.org/caliper/v1/SoftwareApplication&quot;,&#xd;
+        &quot;name&quot;: null,&#xd;
+        &quot;dateModified&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+        &quot;description&quot;: null,&#xd;
+        &quot;properties&quot;: null,&#xd;
+        &quot;extensions&quot;: null,&#xd;
+        &quot;dateCreated&quot;: &quot;${__time(/1000)}&quot;&#xd;
+      },&#xd;
+      &quot;group&quot;: {&#xd;
+        &quot;iType&quot;: &quot;Organization&quot;,&#xd;
+        &quot;@id&quot;: &quot;GroupId&quot;,&#xd;
+        &quot;@type&quot;: &quot;http://purl.imsglobal.org/caliper/v1/lis/Group&quot;,&#xd;
+        &quot;name&quot;: null,&#xd;
+        &quot;parentOrg&quot;: null,&#xd;
+        &quot;dateCreated&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+        &quot;dateModified&quot;: &quot;${__time(/1000)}&quot;,&#xd;
+        &quot;description&quot;: null,&#xd;
+        &quot;properties&quot;: null,&#xd;
+        &quot;extensions&quot;: null&#xd;
+      },&#xd;
+      &quot;eventTime&quot;: ${__javaScript((new Date().getTime())-86400000;)}&#xd;
+    }&#xd;
+  }</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1custom/eventdata</stringProp>
+          <stringProp name="HTTPSampler.method">PUT</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Results" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1492758966000</longProp>
+        <longProp name="ThreadGroup.end_time">1492758966000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Results Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">true</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree>
+          <BeanShellListener guiclass="TestBeanGUI" testclass="BeanShellListener" testname="BeanShell Listener" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">log.info(&quot;\n******************************\nResponse Data :\n\n&quot; + prev.getResponseDataAsString() + &quot;*****************************\n\n&quot;);
+
+//log.info(&quot;\n\nConfig variable : \nhostUrl : &quot; +vars.get(&quot;hostUrl&quot;)+ &quot;,\nusername : &quot; +vars.get(&quot;username&quot;)+ &quot;,\npasswordMain : &quot; +vars.get(&quot;passwordMain&quot;)+ &quot;,\norgUUID : &quot; +vars.get(&quot;orgUUID&quot;)+ &quot;,\ndataCollectionName : &quot; +vars.get(&quot;dataCollectionName&quot;)+ &quot;,\ndataSourceName : &quot; +vars.get(&quot;dataSourceName&quot;)+ &quot;,\nnoOfDC : &quot; +vars.get(&quot;noOfDC&quot;)+ &quot;,\nnoOfDS : &quot; +vars.get(&quot;noOfDS&quot;)+ &quot;,\nsensorId : &quot; +vars.get(&quot;sensorId&quot;)+ &quot;,\neventId : &quot; +vars.get(&quot;eventId&quot;)+ &quot;,\nentityId : &quot; +vars.get(&quot;entityId&quot;)+ &quot;,\nactorId : &quot; +vars.get(&quot;actorId&quot;)+ &quot;,\ncomputedStream : &quot; +vars.get(&quot;computedStream&quot;)+ &quot;,\nsizeOfData : &quot; +vars.get(&quot;sizeOfData&quot;)+ &quot;,\ntimeDiffPrev : &quot; +vars.get(&quot;timeDiffPrev&quot;)+ &quot;,\npath : &quot; +vars.get(&quot;path&quot;)+ &quot;,\ntimeStamp : &quot; +vars.get(&quot;timeStamp&quot;)+ &quot;,\ntotalNoOfRequest : &quot; +vars.get(&quot;totalNoOfRequest&quot;)+ &quot;,\ntotalEventRequestCount : &quot; +vars.get(&quot;totalEventRequestCount&quot;)+ &quot;,\nthreads : &quot; +vars.get(&quot;threads&quot;)+ &quot;,\nrampup : &quot; +vars.get(&quot;rampup&quot;)+ &quot;,\nduration : &quot; +vars.get(&quot;duration&quot;)+ &quot;,\nrawStreamCount : &quot; +vars.get(&quot;rawStreamCount&quot;)+ &quot;,\ncomputedStreamCount : &quot; +vars.get(&quot;computedStreamCount&quot;)+ &quot;,\npauseTimeForProcessing : &quot; +vars.get(&quot;pauseTimeForProcessing&quot;)+&quot;\n\n&quot;);</stringProp>
+          </BeanShellListener>
+          <hashTree/>
+          <kg.apc.jmeter.reporters.FlexibleFileWriter guiclass="kg.apc.jmeter.reporters.FlexibleFileWriterGui" testclass="kg.apc.jmeter.reporters.FlexibleFileWriter" testname="File Writer" enabled="false">
+            <stringProp name="filename">${path}testResult_${__time(dd-MM-yyyy-hh-mm-ss)}.csv</stringProp>
+            <stringProp name="columns">responseData|\r\n</stringProp>
+            <boolProp name="overwrite">false</boolProp>
+            <stringProp name="header">
+</stringProp>
+            <stringProp name="footer"></stringProp>
+          </kg.apc.jmeter.reporters.FlexibleFileWriter>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
