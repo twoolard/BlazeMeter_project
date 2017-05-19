@@ -57,8 +57,8 @@ to desired shape.</stringProp>
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-990683737">
-            <stringProp name="49586">200</stringProp>
+          <collectionProp name="772865845">
+            <stringProp name="52469">500</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="53430">600</stringProp>
