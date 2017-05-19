@@ -57,8 +57,8 @@ to desired shape.</stringProp>
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1202929336">
-            <stringProp name="48625">100</stringProp>
+          <collectionProp name="-990683737">
+            <stringProp name="49586">200</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="53430">600</stringProp>
@@ -77,37 +77,37 @@ and produce their last samples all together without limitations.</stringProp>
       <hashTree>
         <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
           <collectionProp name="load_profile">
-            <collectionProp name="1858254190">
+            <collectionProp name="1914237040">
               <stringProp name="49">1</stringProp>
               <stringProp name="1000">1000</stringProp>
               <stringProp name="1567">10</stringProp>
             </collectionProp>
-            <collectionProp name="1235289872">
+            <collectionProp name="-1219093406">
               <stringProp name="1507423">1000</stringProp>
               <stringProp name="1507423">1000</stringProp>
               <stringProp name="48625">100</stringProp>
             </collectionProp>
-            <collectionProp name="-465405744">
+            <collectionProp name="1375178274">
               <stringProp name="1512228">1500</stringProp>
               <stringProp name="1512228">1500</stringProp>
               <stringProp name="48625">100</stringProp>
             </collectionProp>
-            <collectionProp name="-195274261">
+            <collectionProp name="1645352011">
               <stringProp name="1537214">2000</stringProp>
               <stringProp name="1537214">2000</stringProp>
               <stringProp name="48780">150</stringProp>
             </collectionProp>
-            <collectionProp name="-1625838704">
+            <collectionProp name="214745314">
               <stringProp name="1567005">3000</stringProp>
               <stringProp name="1567005">3000</stringProp>
               <stringProp name="48625">100</stringProp>
             </collectionProp>
-            <collectionProp name="1809503090">
+            <collectionProp name="1865586802">
               <stringProp name="1537214">2000</stringProp>
               <stringProp name="1512228">1500</stringProp>
               <stringProp name="1815">90</stringProp>
             </collectionProp>
-            <collectionProp name="2101867859">
+            <collectionProp name="-2137077811">
               <stringProp name="1512228">1500</stringProp>
               <stringProp name="49">1</stringProp>
               <stringProp name="1691">50</stringProp>
