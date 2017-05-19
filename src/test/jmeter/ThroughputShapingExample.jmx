@@ -14,188 +14,43 @@ to desired shape.</stringProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="false">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>false</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <threadCounts>true</threadCounts>
-          </value>
-        </objProp>
-        <stringProp name="filename"></stringProp>
-        <longProp name="interval_grouping">1000</longProp>
-        <boolProp name="graph_aggregated">false</boolProp>
-        <stringProp name="include_sample_labels"></stringProp>
-        <stringProp name="exclude_sample_labels"></stringProp>
-        <stringProp name="start_offset"></stringProp>
-        <stringProp name="end_offset"></stringProp>
-        <boolProp name="include_checkbox_state">false</boolProp>
-        <boolProp name="exclude_checkbox_state">false</boolProp>
-      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
-      <hashTree/>
-      <com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup guiclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroupGui" testclass="com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup" testname="bzm - Arrivals Thread Group" enabled="true">
-        <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <stringProp name="TargetLevel">12</stringProp>
-        <stringProp name="RampUp">60</stringProp>
-        <stringProp name="Steps">3</stringProp>
-        <stringProp name="Hold">120</stringProp>
-        <stringProp name="LogFilename"></stringProp>
-        <stringProp name="Iterations"></stringProp>
-        <stringProp name="ConcurrencyLimit">1000</stringProp>
-        <stringProp name="Unit">M</stringProp>
-      </com.blazemeter.jmeter.threads.arrivals.ArrivalsThreadGroup>
-      <hashTree>
-        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="false">
-          <collectionProp name="load_profile">
-            <collectionProp name="1914237040">
-              <stringProp name="49">1</stringProp>
-              <stringProp name="1000">1000</stringProp>
-              <stringProp name="1567">10</stringProp>
-            </collectionProp>
-            <collectionProp name="-1219093406">
-              <stringProp name="1507423">1000</stringProp>
-              <stringProp name="1507423">1000</stringProp>
-              <stringProp name="48625">100</stringProp>
-            </collectionProp>
-            <collectionProp name="1375178274">
-              <stringProp name="1512228">1500</stringProp>
-              <stringProp name="1512228">1500</stringProp>
-              <stringProp name="48625">100</stringProp>
-            </collectionProp>
-            <collectionProp name="1645352011">
-              <stringProp name="1537214">2000</stringProp>
-              <stringProp name="1537214">2000</stringProp>
-              <stringProp name="48780">150</stringProp>
-            </collectionProp>
-            <collectionProp name="214745314">
-              <stringProp name="1567005">3000</stringProp>
-              <stringProp name="1567005">3000</stringProp>
-              <stringProp name="48625">100</stringProp>
-            </collectionProp>
-            <collectionProp name="1865586802">
-              <stringProp name="1537214">2000</stringProp>
-              <stringProp name="1512228">1500</stringProp>
-              <stringProp name="1815">90</stringProp>
-            </collectionProp>
-            <collectionProp name="-2137077811">
-              <stringProp name="1512228">1500</stringProp>
-              <stringProp name="49">1</stringProp>
-              <stringProp name="1691">50</stringProp>
-            </collectionProp>
+      <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
+        <collectionProp name="load_profile">
+          <collectionProp name="-2079809452">
+            <stringProp name="49">1</stringProp>
+            <stringProp name="52469">500</stringProp>
+            <stringProp name="1629">30</stringProp>
           </collectionProp>
-          <stringProp name="TestPlan.comments">Table below sets request rate shcedule ant preview graph instantly shows effect of changes.</stringProp>
-        </kg.apc.jmeter.timers.VariableThroughputTimer>
-        <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">www.vulnweb.com</stringProp>
-          <stringProp name="HTTPSampler.port"></stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path"></stringProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree/>
-      </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata"/>
+          <collectionProp name="-403432692">
+            <stringProp name="52469">500</stringProp>
+            <stringProp name="52469">500</stringProp>
+            <stringProp name="48687">120</stringProp>
+          </collectionProp>
+          <collectionProp name="-23821519">
+            <stringProp name="52469">500</stringProp>
+            <stringProp name="49">1</stringProp>
+            <stringProp name="1669">49</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.timers.VariableThroughputTimer>
+      <hashTree/>
+      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="jp@gc - Stepping Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <stringProp name="ThreadGroup.num_threads">2500</stringProp>
+        <stringProp name="Threads initial delay">0</stringProp>
+        <stringProp name="Start users count">80</stringProp>
+        <stringProp name="Start users count burst">100</stringProp>
+        <stringProp name="Start users period">1</stringProp>
+        <stringProp name="Stop users count">50</stringProp>
+        <stringProp name="Stop users period">1</stringProp>
+        <stringProp name="flighttime">120</stringProp>
+        <stringProp name="rampUp">0</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <stringProp name="TestPlan.comments">Make note that Thread Group is set to decrease number of threads at the end of test.
-This made to avoid huge spike when all of threads finally detached from timer
-and produce their last samples all together without limitations.</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      </kg.apc.jmeter.threads.SteppingThreadGroup>
       <hashTree>
-        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
-          <collectionProp name="load_profile">
-            <collectionProp name="1914237040">
-              <stringProp name="49">1</stringProp>
-              <stringProp name="1000">1000</stringProp>
-              <stringProp name="1567">10</stringProp>
-            </collectionProp>
-            <collectionProp name="-1219093406">
-              <stringProp name="1507423">1000</stringProp>
-              <stringProp name="1507423">1000</stringProp>
-              <stringProp name="48625">100</stringProp>
-            </collectionProp>
-            <collectionProp name="1375178274">
-              <stringProp name="1512228">1500</stringProp>
-              <stringProp name="1512228">1500</stringProp>
-              <stringProp name="48625">100</stringProp>
-            </collectionProp>
-            <collectionProp name="1645352011">
-              <stringProp name="1537214">2000</stringProp>
-              <stringProp name="1537214">2000</stringProp>
-              <stringProp name="48780">150</stringProp>
-            </collectionProp>
-            <collectionProp name="214745314">
-              <stringProp name="1567005">3000</stringProp>
-              <stringProp name="1567005">3000</stringProp>
-              <stringProp name="48625">100</stringProp>
-            </collectionProp>
-            <collectionProp name="1865586802">
-              <stringProp name="1537214">2000</stringProp>
-              <stringProp name="1512228">1500</stringProp>
-              <stringProp name="1815">90</stringProp>
-            </collectionProp>
-            <collectionProp name="-2137077811">
-              <stringProp name="1512228">1500</stringProp>
-              <stringProp name="49">1</stringProp>
-              <stringProp name="1691">50</stringProp>
-            </collectionProp>
-          </collectionProp>
-          <stringProp name="TestPlan.comments">Table below sets request rate shcedule ant preview graph instantly shows effect of changes.</stringProp>
-        </kg.apc.jmeter.timers.VariableThroughputTimer>
-        <hashTree/>
-        <kg.apc.jmeter.samplers.DummySampler guiclass="kg.apc.jmeter.samplers.DummySamplerGui" testclass="kg.apc.jmeter.samplers.DummySampler" testname="jp@gc - Dummy Sampler" enabled="false">
-          <boolProp name="SUCCESFULL">true</boolProp>
-          <stringProp name="RESPONSE_CODE">200</stringProp>
-          <stringProp name="RESPONSE_MESSAGE">OK</stringProp>
-          <stringProp name="RESPONSE_DATA">Dummy Sampler used to simulate requests and responses
-without actual network activity. This helps debugging tests.</stringProp>
-          <stringProp name="RESPONSE_TIME">${__Random(1,10)}</stringProp>
-          <stringProp name="TestPlan.comments">Pretty fast response time gives us huge possible RPS rate</stringProp>
-          <boolProp name="WAITING">false</boolProp>
-          <stringProp name="REQUEST_DATA"></stringProp>
-          <stringProp name="LATENCY"></stringProp>
-          <stringProp name="CONNECT"></stringProp>
-        </kg.apc.jmeter.samplers.DummySampler>
-        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
