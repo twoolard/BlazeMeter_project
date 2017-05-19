@@ -57,11 +57,11 @@ to desired shape.</stringProp>
       <hashTree/>
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1101474985">
+          <collectionProp name="1202929336">
             <stringProp name="48625">100</stringProp>
             <stringProp name="48">0</stringProp>
             <stringProp name="48">0</stringProp>
-            <stringProp name="50547">300</stringProp>
+            <stringProp name="53430">600</stringProp>
             <stringProp name="53">5</stringProp>
           </collectionProp>
         </collectionProp>
@@ -77,40 +77,40 @@ and produce their last samples all together without limitations.</stringProp>
       <hashTree>
         <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
           <collectionProp name="load_profile">
-            <collectionProp name="1914237040">
+            <collectionProp name="1858254190">
               <stringProp name="49">1</stringProp>
               <stringProp name="1000">1000</stringProp>
               <stringProp name="1567">10</stringProp>
             </collectionProp>
-            <collectionProp name="1291225664">
+            <collectionProp name="1235289872">
               <stringProp name="1507423">1000</stringProp>
               <stringProp name="1507423">1000</stringProp>
-              <stringProp name="1567">10</stringProp>
+              <stringProp name="48625">100</stringProp>
             </collectionProp>
-            <collectionProp name="-409469952">
+            <collectionProp name="-465405744">
               <stringProp name="1512228">1500</stringProp>
               <stringProp name="1512228">1500</stringProp>
-              <stringProp name="1567">10</stringProp>
+              <stringProp name="48625">100</stringProp>
             </collectionProp>
-            <collectionProp name="-139337657">
+            <collectionProp name="-195274261">
               <stringProp name="1537214">2000</stringProp>
               <stringProp name="1537214">2000</stringProp>
-              <stringProp name="1572">15</stringProp>
+              <stringProp name="48780">150</stringProp>
             </collectionProp>
-            <collectionProp name="-1625802254">
+            <collectionProp name="-1625838704">
               <stringProp name="1567005">3000</stringProp>
               <stringProp name="1567005">3000</stringProp>
-              <stringProp name="49">1</stringProp>
+              <stringProp name="48625">100</stringProp>
             </collectionProp>
-            <collectionProp name="1809587431">
+            <collectionProp name="1809503090">
               <stringProp name="1537214">2000</stringProp>
               <stringProp name="1512228">1500</stringProp>
-              <stringProp name="57">9</stringProp>
+              <stringProp name="1815">90</stringProp>
             </collectionProp>
-            <collectionProp name="2101952172">
+            <collectionProp name="2101867859">
               <stringProp name="1512228">1500</stringProp>
               <stringProp name="49">1</stringProp>
-              <stringProp name="53">5</stringProp>
+              <stringProp name="1691">50</stringProp>
             </collectionProp>
           </collectionProp>
           <stringProp name="TestPlan.comments">Table below sets request rate shcedule ant preview graph instantly shows effect of changes.</stringProp>
