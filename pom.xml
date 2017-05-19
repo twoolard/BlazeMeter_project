@@ -79,11 +79,11 @@
 						<templateDirectory>${basedir}/properties/report-template/</templateDirectory>
 						<targetDirectory>${basedir}/result</targetDirectory>
 						<REPORT_DIR_DATE_FORMAT>yyyy-MM-dd-HH-mm-ss</REPORT_DIR_DATE_FORMAT>
-						<generateReports>true</generateReports>
+						<generateReports>false</generateReports>
 						
 						<jMeterProcessJVMSettings>
-                        <xms>1024</xms>
-                        <xmx>1024</xmx>
+                        <xms>2048</xms>
+                        <xmx>2048</xmx>
                         <arguments>
                             <argument>-Xprof</argument>
                             <argument>-Xfuture</argument>
