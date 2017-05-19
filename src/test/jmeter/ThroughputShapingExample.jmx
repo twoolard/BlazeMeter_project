@@ -26,7 +26,7 @@ to desired shape.</stringProp>
             <stringProp name="52469">500</stringProp>
             <stringProp name="48687">120</stringProp>
           </collectionProp>
-          <collectionProp name="-23821519">
+          <collectionProp name="32196962">
             <stringProp name="52469">500</stringProp>
             <stringProp name="49">1</stringProp>
             <stringProp name="1669">49</stringProp>
@@ -55,7 +55,7 @@ to desired shape.</stringProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">www.blazedemo.com</stringProp>
+          <stringProp name="HTTPSampler.domain">testphp.vulnweb.com/</stringProp>
           <stringProp name="HTTPSampler.port"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
