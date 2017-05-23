@@ -1,180 +1,4 @@
-################################################################################
-# Apache JMeter Property file
-################################################################################
-
-##   Licensed to the Apache Software Foundation (ASF) under one or more
-##   contributor license agreements.  See the NOTICE file distributed with
-##   this work for additional information regarding copyright ownership.
-##   The ASF licenses this file to You under the Apache License, Version 2.0
-##   (the "License"); you may not use this file except in compliance with
-##   the License.  You may obtain a copy of the License at
-## 
-##       http://www.apache.org/licenses/LICENSE-2.0
-## 
-##   Unless required by applicable law or agreed to in writing, software
-##   distributed under the License is distributed on an "AS IS" BASIS,
-##   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-##   See the License for the specific language governing permissions and
-##   limitations under the License.
-
-################################################################################
-#
-#                      THIS FILE SHOULD NOT BE MODIFIED
-#
-# This avoids having to re-apply the modifications when upgrading JMeter
-# Instead only user.properties should be modified:
-# 1/ copy the property you want to modify to user.properties from jmeter.properties
-# 2/ Change its value there
-#
-################################################################################
-
-# JMeter properties are described in the file
-# http://jmeter.apache.org/usermanual/properties_reference.html
-# A local copy can be found in
-# printable_docs/usermanual/properties_reference.html
-
-#Preferred GUI language. Comment out to use the JVM default locale's language.
-#language=en
-
-
-# Additional locale(s) to add to the displayed list.
-# The current default list is: en, fr, de, no, es, tr, ja, zh_CN, zh_TW, pl, pt_BR
-# [see JMeterMenuBar#makeLanguageMenu()]
-# The entries are a comma-separated list of language names
-#locales.add=zu
-
-
-#---------------------------------------------------------------------------
-# XML Parser
-#---------------------------------------------------------------------------
-
-# Path to a Properties file containing Namespace mapping in the form
-# prefix=Namespace
-# Example:
-# ns=http://biz.aol.com/schema/2006-12-18
-#xpath.namespace.config=
-
-#---------------------------------------------------------------------------
-# SSL configuration
-#---------------------------------------------------------------------------
-
-## SSL System properties are now in system.properties
-
-# JMeter no longer converts javax.xxx property entries in this file into System properties.
-# These must now be defined in the system.properties file or on the command-line.
-# The system.properties file gives more flexibility.
-
-# By default, SSL session contexts are now created per-thread, rather than being shared.
-# The original behaviour can be enabled by setting the JMeter property to true
-#https.sessioncontext.shared=false
-
-# Be aware that https default protocol may vary depending on the version of JVM
-# See https://blogs.oracle.com/java-platform-group/entry/diagnosing_tls_ssl_and_https
-# See https://bz.apache.org/bugzilla/show_bug.cgi?id=58236
-# Default HTTPS protocol level:
-#https.default.protocol=TLS
-# This may need to be changed here (or in user.properties) to:
-#https.default.protocol=SSLv3
-
-# List of protocols to enable. You may have to select only a subset if you find issues with target server.
-# This is needed when server does not support Socket version negotiation, this can lead to:
-# javax.net.ssl.SSLPeerUnverifiedException: peer not authenticated
-# java.net.SocketException: Connection reset
-# see https://bz.apache.org/bugzilla/show_bug.cgi?id=54759
-#https.socket.protocols=SSLv2Hello SSLv3 TLSv1
-
-# Control if we allow reuse of cached SSL context between iterations
-# set the value to 'false' to reset the SSL context each iteration
-#https.use.cached.ssl.context=true
-
-# Start and end index to be used with keystores with many entries
-# The default is to use entry 0, i.e. the first
-#https.keyStoreStartIndex=0
-#https.keyStoreEndIndex=0
-
-#---------------------------------------------------------------------------
-# Look and Feel configuration
-#---------------------------------------------------------------------------
-
-#Classname of the Swing default UI
-#
-# The LAF classnames that are available are now displayed as ToolTip text
-# when hovering over the Options/Look and Feel selection list.
-#
-# You can either use a full class name, as shown below,
-# or one of the strings "System" or "CrossPlatform" which means
-#  JMeter will use the corresponding string returned by UIManager.get<name>LookAndFeelClassName()
-
-# LAF can be overridden by os.name (lowercased, spaces replaced by '_')
-# Sample os.name LAF:
-#jmeter.laf.windows_xp=javax.swing.plaf.metal.MetalLookAndFeel
-
-# Failing that, the OS family = os.name, but only up to first space:
-# Sample OS family LAF:
-#jmeter.laf.windows=com.sun.java.swing.plaf.windows.WindowsLookAndFeel
-
-# Mac apparently looks better with the System LAF
 jmeter.laf.mac=System
-
-# Failing that, the JMeter default laf can be defined:
-#jmeter.laf=System
-
-# If none of the above jmeter.laf properties are defined, JMeter uses the CrossPlatform LAF.
-# This is because the CrossPlatform LAF generally looks better than the System LAF.
-# See https://bz.apache.org/bugzilla/show_bug.cgi?id=52026 for details
-# N.B. the laf can be defined in user.properties.
-
-# LoggerPanel display
-# default to false
-#jmeter.loggerpanel.display=false
-
-# Enable LogViewer Panel to receive log event even if closed
-# Enabled since 2.12
-# Note this has some impact on performances, but as GUI mode must
-# not be used for Load Test it is acceptable
-#jmeter.loggerpanel.enable_when_closed=true
-
-# Max lines kept in LoggerPanel, default to 1000 chars
-# 0 means no limit
-#jmeter.loggerpanel.maxlength=1000
-
-# Interval period in ms to process the queue of events of the listeners
-#jmeter.gui.refresh_period=500
-
-# HiDPI mode (default: false)
-# Activate a 'pseudo'-hidpi mode. Allows to increase size of some UI elements
-# which are not correctly managed by JVM with high resolution screens in Linux or Windows
-#jmeter.hidpi.mode=false
-# To enable pseudo-hidpi mode change to true
-#jmeter.hidpi.mode=true
-# HiDPI scale factor
-#jmeter.hidpi.scale.factor=1.0
-# Suggested value for HiDPI
-#jmeter.hidpi.scale.factor=2.0
-
-# Toolbar display
-# Toolbar icon definitions
-#jmeter.toolbar.icons=org/apache/jmeter/images/toolbar/icons-toolbar.properties
-# Toolbar list
-#jmeter.toolbar=new,open,close,save,save_as_testplan,|,cut,copy,paste,|,expand,collapse,toggle,|,test_start,test_stop,test_shutdown,|,test_start_remote_all,test_stop_remote_all,test_shutdown_remote_all,|,test_clear,test_clear_all,|,search,search_reset,|,function_helper,help
-# Toolbar icons default size: 22x22. Available sizes are: 22x22, 32x32, 48x48
-#jmeter.toolbar.icons.size=22x22
-# Suggested value for HiDPI
-#jmeter.toolbar.icons.size=48x48
-
-# Icon definitions
-# default:
-#jmeter.icons=org/apache/jmeter/images/icon.properties
-# alternate:
-#jmeter.icons=org/apache/jmeter/images/icon_1.properties
-# Historical icon set (deprecated)
-#jmeter.icons=org/apache/jmeter/images/icon_old.properties
-
-# Tree icons default size: 19x19. Available sizes are: 19x19, 24x24, 32x32, 48x48
-# Useful for HiDPI display (see below)
-#jmeter.tree.icons.size=19x19
-# Suggested value for HiDPI screen like 3200x1800:
-#jmeter.tree.icons.size=32x32
 
 #Components to not display in JMeter GUI (GUI class name or static label)
 # These elements are deprecated and will be removed in next version: 
@@ -238,8 +62,8 @@ gui.quick_9=ViewResultsFullVisualizer
 #---------------------------------------------------------------------------
 
 # Remote Hosts - comma delimited
-#remote_hosts=127.0.0.1
 remote_hosts=172.31.4.14
+server_port=1090
 #remote_hosts=localhost:1099,localhost:2010
 
 # RMI port to be used by the server (must start rmiregistry with same port)
@@ -262,8 +86,8 @@ remote_hosts=172.31.4.14
 # Parameter that controls the RMI port used by the RemoteSampleListenerImpl (The Controler)
 # Default value is 0 which means port is randomly assigned
 # You may need to open Firewall port on the Controller machine
-#client.rmi.localport=0
 client.rmi.localport=7000
+
 # When distributed test is starting, there may be several attempts to initialize
 # remote engines. By default, only single try is made. Increase following property
 # to make it retry for additional times
@@ -692,7 +516,7 @@ wmlParser.types=text/vnd.wap.wml
 #time_threshold=60000
 #
 # Asynchronous sender; uses a queue and background worker process to return the samples
-#mode=Asynch
+mode=Asynch
 # default queue size
 #asynch.batch.queue.size=100
 # Same as Asynch but strips response data from SampleResult

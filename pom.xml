@@ -93,7 +93,7 @@
 						<remoteConfig>
                             <startServersBeforeTests>true</startServersBeforeTests>
 							<!--serverList>172.31.4.14</serverList-->
-                            <stopServersAfterTests>false</stopServersAfterTests>
+                            <stopServersAfterTests>true</stopServersAfterTests>
                         </remoteConfig>
 						
 					</configuration>
