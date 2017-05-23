@@ -81,14 +81,14 @@
 						<REPORT_DIR_DATE_FORMAT>yyyy-MM-dd-HH-mm-ss</REPORT_DIR_DATE_FORMAT>
 						<generateReports>false</generateReports>
 						
-						<jMeterProcessJVMSettings>
+						<!--jMeterProcessJVMSettings>
                         <xms>2048</xms>
                         <xmx>2048</xmx>
                         <arguments>
                             <argument>-Xprof</argument>
                             <argument>-Xfuture</argument>
                         </arguments>
-						</jMeterProcessJVMSettings>
+						</jMeterProcessJVMSettings-->
 						
 						<remoteConfig>
                             <startServersBeforeTests>true</startServersBeforeTests>
