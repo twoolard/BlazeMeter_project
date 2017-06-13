@@ -85,17 +85,16 @@
                         <xms>1024</xms>
                         <xmx>1024</xmx>
                         <arguments>
-							<argument>-Djava.rmi.server.hostname=54.190.197.120</argument>
+							<argument>-Djava.rmi.server.hostname=172.31.31.33</argument>
                             <argument>-Dclient.rmi.localport=60000</argument>
-							<argument>-R34.223.226.91</argument>
-                            <argument>-Xprof</argument>
+							<argument>-Xprof</argument>
                             <argument>-Xfuture</argument>
                         </arguments>
 						</jMeterProcessJVMSettings>
 						
 						<remoteConfig>
                             <startServersBeforeTests>true</startServersBeforeTests>
-							<!--serverList>172.31.24.174</serverList-->
+							<serverList>172.31.24.174</serverList>
                             <stopServersAfterTests>true</stopServersAfterTests>
                         </remoteConfig>
 						
