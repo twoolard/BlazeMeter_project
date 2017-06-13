@@ -49,12 +49,19 @@
                         </execution>
 					</executions>
 					<configuration>
-						<propertiesUser>
+						<!--propertiesUser>
 								<vUsers>${vUsers}</vUsers>
 								<rampUpTime>${rampUpTime}</rampUpTime>
 								<duration>${duration}</duration>
 								<thinkTime>${thinkTime}</thinkTime>
-						</propertiesUser>
+						</propertiesUser-->
+						<propertiesGlobal>
+								<vUsers>${vUsers}</vUsers>
+								<rampUpTime>${rampUpTime}</rampUpTime>
+								<duration>${duration}</duration>
+								<thinkTime>${thinkTime}</thinkTime>
+						</propertiesGlobal>
+						
 						<propertiesFilesDirectory>${basedir}/properties</propertiesFilesDirectory>
 						
 						<jmeterExtensions>
@@ -95,7 +102,7 @@
 						<remoteConfig>
                             <startServersBeforeTests>true</startServersBeforeTests>
 							<serverList>172.31.24.174</serverList>
-                            <stopServersAfterTests>true</stopServersAfterTests>
+                            <stopServersAfterTests>false</stopServersAfterTests>
                         </remoteConfig>
 						
 					</configuration>
