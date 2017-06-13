@@ -90,11 +90,11 @@
                         </arguments>
 						</jMeterProcessJVMSettings-->
 						
-						<!--remoteConfig>
+						<remoteConfig>
                             <startServersBeforeTests>true</startServersBeforeTests>
-							<serverList>172.31.4.14</serverList>
+							<serverList>172.31.24.174</serverList>
                             <stopServersAfterTests>true</stopServersAfterTests>
-                        </remoteConfig-->
+                        </remoteConfig>
 						
 					</configuration>
 				</plugin>
