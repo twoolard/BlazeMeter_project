@@ -101,7 +101,7 @@
 						
 						<remoteConfig>
                             <startServersBeforeTests>true</startServersBeforeTests>
-							<serverList>172.31.24.174</serverList>
+							<serverList>172.31.24.174,172.31.20.63</serverList>
                             <stopServersAfterTests>false</stopServersAfterTests>
                         </remoteConfig>
 						
