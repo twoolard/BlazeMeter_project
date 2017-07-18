@@ -49,18 +49,18 @@
                         </execution>
 					</executions>
 					<configuration>
-						<!--propertiesUser>
+						<propertiesUser>
 								<vUsers>${vUsers}</vUsers>
 								<rampUpTime>${rampUpTime}</rampUpTime>
 								<duration>${duration}</duration>
 								<thinkTime>${thinkTime}</thinkTime>
-						</propertiesUser-->
-						<propertiesGlobal>
+						</propertiesUser>
+						<!--propertiesGlobal>
 								<vUsers>${vUsers}</vUsers>
 								<rampUpTime>${rampUpTime}</rampUpTime>
 								<duration>${duration}</duration>
 								<thinkTime>${thinkTime}</thinkTime>
-						</propertiesGlobal>
+						</propertiesGlobal-->
 						
 						<propertiesFilesDirectory>${basedir}/properties</propertiesFilesDirectory>
 						
@@ -88,7 +88,7 @@
 						<REPORT_DIR_DATE_FORMAT>yyyy-MM-dd-HH-mm-ss</REPORT_DIR_DATE_FORMAT>
 						<generateReports>true</generateReports>
 						
-						<jMeterProcessJVMSettings>
+						<!--jMeterProcessJVMSettings>
                         <xms>1024</xms>
                         <xmx>1024</xmx>
                         <arguments>
@@ -103,7 +103,7 @@
                             <startServersBeforeTests>true</startServersBeforeTests>
 							<serverList>172.31.24.174,172.31.20.63</serverList>
                             <stopServersAfterTests>false</stopServersAfterTests>
-                        </remoteConfig>
+                        </remoteConfig-->
 						
 					</configuration>
 				</plugin>
