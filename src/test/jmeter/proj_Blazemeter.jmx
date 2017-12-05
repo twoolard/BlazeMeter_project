@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.2 r1790748">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="DemoScript" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -1013,7 +1013,7 @@ log.error
               </elementProp>
               <elementProp name="influxdbUrl" elementType="Argument">
                 <stringProp name="Argument.name">influxdbUrl</stringProp>
-                <stringProp name="Argument.value">http://172.31.31.33:8086/write?db=jmeter</stringProp>
+                <stringProp name="Argument.value">http://172.31.22.8:8086/write?db=learning-house-perf-test </stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="application" elementType="Argument">
