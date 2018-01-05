@@ -1,20 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.myPlugin.try</groupId>
+    <groupId>com.weldNorth.LearningHouse</groupId>
     <artifactId>jmeter</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
-    <name>Jmeter Plugin Try</name>
+    <name>com.weldNorth.LearningHouse</name>
     <url>http://maven.apache.org</url>
-
-<!--modules>
-	<module>WebSocketSampler.xml</module>
-</modules-->
-
-
-	<build>
-        <plugins>
-
+<build>
+		<plugins>
 			<!--Plugin To Generate Time Stamp Value During Execution -->
             <plugin>
                 <groupId>com.keyboardsamurais.maven</groupId>
@@ -32,16 +25,12 @@
                     </execution>
                 </executions>
             </plugin>
-		
 			<plugin>
                     <groupId>com.lazerycode.jmeter</groupId>
                     <artifactId>jmeter-maven-plugin</artifactId>
                     <version>2.2.0</version>
                     <executions>
                         <execution>
-						<!--configuration>
-							
-						</configuration-->
                             <id>jmeter-tests</id>
                             <goals>
                                 <goal>jmeter</goal>
@@ -49,45 +38,53 @@
                         </execution>
 					</executions>
 					<configuration>
+						<jmeterVersion>3.3</jmeterVersion>
+						<propertiesFilesDirectory>${basedir}/properties</propertiesFilesDirectory>
+						<jmeterExtensions>
+							<artifact>kg.apc:jmeter-plugins-standard:jar:1.4.0</artifact>
+							<artifact>kg.apc:jmeter-plugins-extras:jar:1.4.0</artifact>
+							<artifact>kg.apc:jmeter-plugins-extras-libs:jar:1.4.0</artifact>
+						</jmeterExtensions>
+						<downloadExtensionDependencies>false</downloadExtensionDependencies>
+						<customPropertiesFiles><file>settings.properties</file></customPropertiesFiles>
+						<suppressJMeterOutput>false</suppressJMeterOutput>
+						<overrideRootLogLevel>ERROR</overrideRootLogLevel>
+						<appendResultsTimestamp>false</appendResultsTimestamp>
+						<testResultsTimestamp>false</testResultsTimestamp>
+						<resultsDirectory>${basedir}/result/${timestamp}</resultsDirectory>
+						<resultsFileFormat>csv</resultsFileFormat>
+						<logsDirectory>${basedir}/result/${timestamp}</logsDirectory>
+						<reportDirectory>${basedir}/result/${timestamp}</reportDirectory>
+						<templateDirectory>${basedir}/properties/report-template/</templateDirectory>
+						<targetDirectory>${basedir}/result</targetDirectory>
+						<REPORT_DIR_DATE_FORMAT>yyyy-MM-dd-HH-mm-ss</REPORT_DIR_DATE_FORMAT>
+						<generateReports>true</generateReports>
 						<propertiesUser>
 								<vUsers>${vUsers}</vUsers>
 								<rampUpTime>${rampUpTime}</rampUpTime>
 								<duration>${duration}</duration>
 								<thinkTime>${thinkTime}</thinkTime>
+								<LoopController>${LoopController}</LoopController>
+								<dbip>${dbip}</dbip>
+								<dbname>${dbname}</dbname>
+								<!--baseUrl></baseUrl>
+								<LoginFIle></LoginFIle>
+								<httpPort>${httpPort}</httpPort>
+								<httpProtocol>${httpProtocol}</httpProtocol-->
 						</propertiesUser>
 						<!--propertiesGlobal>
 								<vUsers>${vUsers}</vUsers>
 								<rampUpTime>${rampUpTime}</rampUpTime>
 								<duration>${duration}</duration>
 								<thinkTime>${thinkTime}</thinkTime>
+								<LoopController>${LoopController}</LoopController>
+								<dbip>${dbip}</dbip>
+								<dbname>${dbname}</dbname>
+								<baseUrl></baseUrl>
+								<LoginFIle></LoginFIle>
+								<httpPort>${httpPort}</httpPort>
+								<httpProtocol>${httpProtocol}</httpProtocol>
 						</propertiesGlobal-->
-						
-						<propertiesFilesDirectory>${basedir}/properties</propertiesFilesDirectory>
-						
-						<jmeterExtensions>
-							<artifact>kg.apc:jmeter-plugins-standard:jar:1.4.0</artifact>
-							<artifact>kg.apc:jmeter-plugins-extras:jar:1.4.0</artifact>
-							<artifact>kg.apc:jmeter-plugins-extras-libs:jar:1.4.0</artifact>
-							<!--artifact>com.performanceMatters.OLA:JMeterWebSocketSampler:jar:1.0.2-SNAPSHOT</artifact-->
-						</jmeterExtensions>
-						<downloadExtensionDependencies>false</downloadExtensionDependencies>
-						
-						<suppressJMeterOutput>false</suppressJMeterOutput>
-						<overrideRootLogLevel>ERROR</overrideRootLogLevel>
-						
-						<appendResultsTimestamp>false</appendResultsTimestamp>
-						<testResultsTimestamp>false</testResultsTimestamp>
-						
-						<resultsDirectory>${basedir}/result/${timestamp}</resultsDirectory>
-						<resultsFileFormat>csv</resultsFileFormat>
-						<logsDirectory>${basedir}/result/${timestamp}</logsDirectory>
-						
-						<reportDirectory>${basedir}/result/${timestamp}</reportDirectory>
-						<templateDirectory>${basedir}/properties/report-template/</templateDirectory>
-						<targetDirectory>${basedir}/result</targetDirectory>
-						<REPORT_DIR_DATE_FORMAT>yyyy-MM-dd-HH-mm-ss</REPORT_DIR_DATE_FORMAT>
-						<generateReports>false</generateReports>
-						
 						<!--jMeterProcessJVMSettings>
                         <xms>1024</xms>
                         <xmx>1024</xmx>
@@ -98,15 +95,13 @@
                             <argument>-Xfuture</argument>
                         </arguments>
 						</jMeterProcessJVMSettings>
-						
 						<remoteConfig>
                             <startServersBeforeTests>true</startServersBeforeTests>
 							<serverList>172.31.24.174,172.31.20.63</serverList>
                             <stopServersAfterTests>false</stopServersAfterTests>
                         </remoteConfig-->
-						
 					</configuration>
 				</plugin>
-		 </plugins>
+		</plugins>
     </build>
 </project>
